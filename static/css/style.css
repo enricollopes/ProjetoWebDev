@@ -1,72 +1,119 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
+/* BODY */
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
 }
 
+/* ===== TOPO / MENU ===== */
 .topo {
-    position: fixed;
+    position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
-    padding: 15px 20px;
-    background-color: #fff;
+    padding: 20px 40px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    z-index: 1000;
-}
-
-.logo {
-    height: 50px;
+    justify-content: center;
+    z-index: 10;
+    background: transparent;
 }
 
 .menu {
     display: flex;
-    gap: 15px;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo {
+    height: 70px;
 }
 
 .menu a {
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 14px;
 }
 
-main {
-    flex: 1;
-    padding-top: 130px; 
-    padding-bottom: 60px;
+.menu a:hover {
+    color: #3511ff;
 }
 
-/* FOOTER */
-footer {
-    background-color: #f2f2f2;
-    text-align: center;
-    padding: 15px 0;
+/* ===== HERO ===== */
+.hero {
+    height: 100vh;
+    background-image: url('../images/dojo.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
 
-@media (min-width: 768px) {
-    .topo {
-        flex-direction: row;
-        justify-content: center;
-        gap: 40px;
-        padding: 20px 40px;
+.herotexto {
+    position: absolute;
+    top: 55%;
+    left: 7%;
+    transform: translateY(-50%);
+    max-width: 520px;
+}
+
+.herotexto h1 {
+    font-size: 55px;
+    font-weight: 700;
+    color: white;
+    line-height: 1.1;
+    text-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+}
+
+/* ===== Prévia modalidades ===== */
+.low {
+  background-color: #3d1fdd;
+  padding: 50px 0;
+  color: #334f53;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  gap: 20px;
+  box-shadow: 0 -40px 80px rgba(0,0,0,0.8);
+}
+.conteudo1{
+  flex: 1;  
+  font-size: 45px;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  max-width: 45%;
+  margin-left: 60px;
+  color: white;
+}
+.conteudo2{
+  flex: 1;
+  font-size: 25px;
+  margin-top: 70px;
+  max-width: 45%;
+  color: white;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+    .menu {
+        gap: 15px;
     }
 
-    .logo {
-        height: 70px;
+    .herotexto h1 {
+        font-size: 38px;
     }
 
-    .menu a {
-        font-size: 16px;
+    .low {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .conteudo1,
+    .conteudo2 {
+        max-width: 90%;
+        margin-top: 20px;
     }
 }
