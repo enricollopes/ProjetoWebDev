@@ -1,0 +1,237 @@
+<!DOCTYPE html>  
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boxe | A Nobre Arte</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4; 
+        }
+
+        .grande-angular {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), 
+                    url('/static/images/muay.png');
+            backdrop-filter: blur(5px);
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .grande-angular h1 {
+            font-size: 5rem;
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+        }
+
+        .grande-angular .faixa-titulo {
+            font-size: 1.5rem;
+            font-weight: 300;
+            border-top: 2px solid #393ce6; 
+            padding-top: 10px;
+        }
+        
+        .round-informativo {
+            padding: 80px 10%;
+        }
+
+        .tablado {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .manchete-central {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .manchete-central h2 {
+            font-size: 2.5rem;
+            color: #1a1a1a;
+        }
+
+        .manchete-central .divisor-estilizado {
+            width: 80px;
+            height: 5px;
+            background: #393ce6; 
+            margin: 10px auto;
+        }
+
+        .clinch-de-conteudo {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .texto-nobre-arte h3 {
+            font-family: 'Oswald';
+            text-transform: uppercase;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #393ce6;
+        }
+
+        .texto-nobre-arte {
+            margin-left: 70px;
+            text-align: left;
+        }
+
+        .listagem {
+            margin-left: 70px;
+        }
+
+        .listagem p {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #393ce6;
+            font-family: 'Oswald';
+            text-transform: uppercase;
+        }
+
+        .listagem ul {
+            padding-left: 40px;
+        }
+
+        .listagem li {
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .corner-de-treino {
+            background-color: #1a1a1a;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 60px 10%;
+        }
+
+        /* NOVO NOME: cards */
+        .cards {
+            flex: 1;
+            min-width: 250px;
+            background: #252525;
+            padding: 30px;
+            border-radius: 5px;
+            transition: transform 0.3s;
+            border-bottom: 4px solid #393ce6;
+        }
+
+        .cards:hover {
+            transform: translateY(-10px);
+        }
+
+        .cards h3 {
+            margin-bottom: 15px;
+            color: #393ce6;
+        }
+
+        .rodape {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .grande-angular h1 { font-size: 3rem; }
+            .clinch-de-conteudo { grid-template-columns: 1fr; }
+            .round-informativo { padding: 50px 5%; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="grande-angular">
+    <h1>MUAY THAI</h1>
+    <p class="faixa-titulo">A ARTE DAS OITO ARMAS</p>
+</header>
+
+<section class="round-informativo">
+    <div class="tablado">
+        <div class="manchete-central">
+            <h2>O que é o Boxe?</h2>
+            <div class="divisor-estilizado"></div>
+        </div>
+
+        <div class="clinch-de-conteudo">
+            <div class="texto-nobre-arte">
+                <h3>Resiliência e Técnica</h3>
+                <p>O Muay Thai é a arte das oito armas. Punhos, cotovelos, joelhos e canelas trabalham juntos em um estilo direto, agressivo e implacável.</p>
+                <br>
+                <p>Nascido na Tailândia, o Muay Thai moderno é focado em trocação, clinch e resistência extrema, exigindo corpo e mente preparados para o combate.</p>
+            </div>
+
+            <div class="listagem">
+                <p>Combina com quem é:</p>
+                <ul>
+                    <li>Intenso</li>
+                    <li>Corajoso</li>
+                    <li>Persistente</li>
+                    <li>Gosta de desafios físicos</li>
+                    <li>Não foge de confronto</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="corner-de-treino">
+    <div class="cards">
+        <h3>Disciplina</h3>
+        <p>O Muay Thai exige rotina dura, respeito ao treino e controle emocional mesmo sob dor e cansaço.</p>
+    </div>
+
+    <div class="cards">
+        <h3>Saúde</h3>
+        <p>Um dos esportes que mais queima calorias, melhora força, explosão, resistência e condicionamento geral.</p>
+    </div>
+
+    <div class="cards">
+        <h3>Respeito</h3>
+        <p>Apesar da brutalidade no ringue, o Muay Thai carrega uma tradição profunda de honra e respeito entre lutadores.<p>
+    </div>
+</section>
+
+<section class="round-informativo">
+    <div class="tablado">
+        <div class="manchete-central">
+            <h2>Fundamentos Básicos</h2>
+            <div class="divisor-estilizado"></div>
+        </div>
+        <p style="text-align: center; max-width: 700px; margin: auto;">
+            Para dominar o Muay Thai, o atleta precisa aprender 
+            <strong>chutes, joelhadas, cotoveladas, socos e o clinch</strong>.
+        </p>
+    </div>
+</section>
+
+<footer class="rodape">
+    <p>&copy; 2026 - Mundo Marcial - Paixão por Combate</p>
+</footer>
+
+</body>
+</html>
