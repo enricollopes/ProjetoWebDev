@@ -7,6 +7,10 @@ from marcial import app
 def home():
     return render_template("index.html")
 
+@app.route('/sobre')
+def sobre():
+    return render_template('sobre.html')
+
 
 @app.route("/boxe")
 def boxe():

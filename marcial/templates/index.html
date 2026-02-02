@@ -11,15 +11,15 @@
 </head>
 
 <body>
-    <header class="topo">
+    <header class="topo"  >
         <nav class="menu">
-            <img src="/static/images/logo.png" alt="Logo" class="logo">
-                <a href="index.html">Início</a>
+            <img src="../static/images/logo.png" alt="Logo" class="logo">
+                <a href="#inicio">Início</a>
                 <a href="matricula.html">Matrícula</a>
-                <a href="ajuda.html">Ajuda</a>
+                <a href="{{url_for('sobre')}}">Sobre</a>
         </nav>
     </header>
-    <section class="hero">
+    <section class="hero" id="inicio">
         <div class="herotexto">
             <h1>MAIS VALE UM BOM SOCO NA HORA CERTA QUE MIL GOLPES ATIRADOS AO VENTO</h1>
         </div>
