@@ -1,9 +1,12 @@
+{%extends 'base.html'%}
+
+{%block content%}
 <!DOCTYPE html>  
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Judô | Caminho Suave</title>
+    <title>Boxe | A Nobre Arte</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 
@@ -23,7 +26,7 @@
 
         .grande-angular {
             background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), 
-                    url('/static/images/judopage.png');
+                    url('/static/images/muay.png');
             backdrop-filter: blur(5px);
             background-size: cover;
             background-position: center;
@@ -128,6 +131,7 @@
             gap: 20px;
             padding: 60px 10%;
         }
+
         .cards {
             flex: 1;
             min-width: 250px;
@@ -165,35 +169,33 @@
 <body>
 
 <header class="grande-angular">
-    <h1>JUDÔ</h1>
-    <p class="faixa-titulo">O CAMINHO SUAVE</p>
+    <h1>MUAY THAI</h1>
+    <p class="faixa-titulo">A ARTE DAS OITO ARMAS</p>
 </header>
 
 <section class="round-informativo">
     <div class="tablado">
         <div class="manchete-central">
-            <h2>O que é o Judô?</h2>
+            <h2>O que é o Muay Thai?</h2>
             <div class="divisor-estilizado"></div>
         </div>
 
         <div class="clinch-de-conteudo">
             <div class="texto-nobre-arte">
                 <h3>Resiliência e Técnica</h3>
-                <p>O judô é a arte de vencer usando equilíbrio, tempo e alavanca. Mais do que força, ele exige leitura do oponente e precisão em cada movimento.</p>
+                <p>O Muay Thai é a arte das oito armas. Punhos, cotovelos, joelhos e canelas trabalham juntos em um estilo direto, agressivo e implacável.</p>
                 <br>
-                <p>Criado por Jigoro Kano no Japão, o judô moderno se baseia em projeções, controle no solo e na filosofia de máxima eficiência com mínimo esforço.</p>
-
+                <p>Nascido na Tailândia, o Muay Thai moderno é focado em trocação, clinch e resistência extrema, exigindo corpo e mente preparados para o combate.</p>
             </div>
 
             <div class="listagem">
                 <p>Combina com quem é:</p>
                 <ul>
-                    <li>Disciplinado</li>
-                    <li>Calmo</li>
-                    <li>Estratégico</li>
-                    <li>Observador</li>
-                    <li>Gosta de técnica</li>
-
+                    <li>Intenso</li>
+                    <li>Corajoso</li>
+                    <li>Persistente</li>
+                    <li>Gosta de desafios físicos</li>
+                    <li>Não foge de confronto</li>
                 </ul>
             </div>
         </div>
@@ -203,18 +205,17 @@
 <section class="corner-de-treino">
     <div class="cards">
         <h3>Disciplina</h3>
-        <p>O judô valoriza o respeito às regras, aos mestres e aos colegas. A disciplina é parte central do caminho do judoca.</p>
+        <p>O Muay Thai exige rotina dura, respeito ao treino e controle emocional mesmo sob dor e cansaço.</p>
     </div>
 
     <div class="cards">
         <h3>Saúde</h3>
-        <p>Desenvolve força, coordenação, equilíbrio e consciência corporal, além de melhorar o condicionamento físico geral.</p>
-
+        <p>Um dos esportes que mais queima calorias, melhora força, explosão, resistência e condicionamento geral.</p>
     </div>
 
     <div class="cards">
         <h3>Respeito</h3>
-        <p>No judô, o cumprimento antes e depois da luta simboliza humildade, honra e reconhecimento pelo adversário.</p>
+        <p>Apesar da brutalidade no ringue, o Muay Thai carrega uma tradição profunda de honra e respeito entre lutadores.<p>
     </div>
 </section>
 
@@ -225,11 +226,12 @@
             <div class="divisor-estilizado"></div>
         </div>
         <p style="text-align: center; max-width: 700px; margin: auto;">
-            Para evoluir no judô, o atleta deve dominar 
-            <strong>quedas (nage-waza), imobilizações, estrangulamentos e chaves de braço</strong>.
+            Para dominar o Muay Thai, o atleta precisa aprender 
+            <strong>chutes, joelhadas, cotoveladas, socos e o clinch</strong>.
         </p>
     </div>
 </section>
+{%endblock%}
 
 <footer class="rodape">
     <p>&copy; 2026 - Mundo Marcial - Paixão por Combate</p>
