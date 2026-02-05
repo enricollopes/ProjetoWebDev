@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+
+{%block content%}
+
+<link rel="stylesheet" href="../static/css/login.css">
+
+<div class="form-login">
+
+    <h2> Acesse sua Conta</h2>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="error">
+                {{ messages [0]}}
+
+            </div>
+        {%endif %}
+    {% endwith %}
+
+    <form action="{{url_for('autenticar_login')}}" method="POST">
+        <p> CPF</p>
+        <input type="text" name="cpf" placeholder="Digite seu documento">
+        <p> Email </p>
+        <input type="text" name="email" placeholder="Digite seu email">
+        
+        <button type="submit" class="enviar"> Fazer Login </button>
+    </form>
+</div>
+
+{%endblock%}

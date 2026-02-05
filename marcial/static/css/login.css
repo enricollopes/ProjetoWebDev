@@ -1,0 +1,48 @@
+.form-login{
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.form-login h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.form-login p {
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-login input[type="text"],
+.form-login input[type="email"],
+.form-login select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.enviar{
+    width: 100%;
+    padding: 15px;
+    margin-top: 30px;
+    background-color: #f30a0a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
