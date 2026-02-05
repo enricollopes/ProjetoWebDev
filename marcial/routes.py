@@ -1,4 +1,4 @@
-from flask import render_template, url_for, redirect, session
+from flask import render_template, url_for, redirect, session, request
 
 from marcial import app
 
@@ -6,6 +6,15 @@ from marcial import app
 @app.route("/")
 def home():
     return render_template("index.html")
+
+@app.route("/cadastro")
+def cadastro():
+
+    plano_selecionado = request.args.get('plano')
+    
+
+    return render_template('cadastro.html', nome_plano = plano_selecionado.capitalize(), plano_id = plano_selecionado)
+    
 
 @app.route('/sobre')
 def sobre():
