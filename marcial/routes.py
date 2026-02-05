@@ -64,6 +64,8 @@ def salvar_cadastro():
     email = request.form['email']
     cpf = request.form['cpf']
     plano = request.form['plano_final']
+    sexo = request.form['sexo']
+    modalidade = request.form['modalidade']
 
     if usuario_existente(cpf , email):
 
@@ -71,8 +73,6 @@ def salvar_cadastro():
         
         return redirect(url_for('cadastro', plano=plano))
     
-    sexo = request.form['sexo']
-    modalidade = request.form['modalidade']
     
 
     dados = [nome , email , cpf , sexo , modalidade , plano]
@@ -92,18 +92,20 @@ def usuario_existente(cpf , email):
 
     if not os.path.exists(caminho_arquivo):
         return False
-    
-    with open(caminho_arquivo , mode ='r', newline='', encoding='utf-8') as arquivo_csv:
+
+    with open(caminho_arquivo, mode='r', newline='', encoding='utf-8') as arquivo_csv:
         leitor = csv.reader(arquivo_csv)
-        next(leitor)
+        
+        if not next(leitor, None):
+            return False
 
         for linha in leitor:
-            email_existe = linha[1]
-            cpf_existe = linha[2]
+            if len(linha) >= 3:
+                email_salvo = linha[1].strip()
+                cpf_salvo = linha[2].strip()
 
-            if cpf_existe == cpf or email_existe == email:
-                return True
-    
+                if cpf_salvo == cpf.strip() or email_salvo == email.strip():
+                    return True
     return False
 
 
