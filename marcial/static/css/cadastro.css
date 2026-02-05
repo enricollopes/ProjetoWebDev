@@ -1,0 +1,57 @@
+.formulario {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.formulario h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.formulario p {
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.enviar{
+    width: 100%;
+    padding: 15px;
+    margin-top: 30px;
+    background-color: #f30a0a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.error {
+    background-color: #e05252;
+    padding: 10px 30px;
+    color: #fffcfc;
+    border-radius: 15px;
+    text-align: center;
+
+}
