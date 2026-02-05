@@ -15,7 +15,7 @@
         <nav class="menu">
             <img src="../static/images/logo.png" alt="Logo" class="logo">
                 <a href="#inicio">Início</a>
-                <a href="matricula.html">Matrícula</a>
+                <a href="#planos">Matrícula</a>
                 <a href="{{url_for('sobre')}}">Sobre</a>
                 <a href="{{url_for('login')}}"> Login</a>
         </nav>
@@ -63,7 +63,7 @@
 
     </section>
 
-    <section class="planos"> 
+    <section class="planos" id="planos"> 
 
         <h2> Conheca nossos planos</h2>
 
@@ -72,9 +72,9 @@
             <h4> Plano Mensal</h4>
             <p> Benificios</p>
             <ul>
-                <li> coida nboa</li>
-                <li> felicidadea</li>
-                <li> namordad</li>
+                <li> Primeiro Mês Gratis </li>
+                <li> Desconto no pix </li>
+                <li> </li>
             </ul>
             <a href="{{url_for('cadastro', plano = 'mensal')}}"> ASSINE AGORA</a>
         </div>
@@ -82,9 +82,9 @@
             <h4> Plano Trimensal</h4>
             <p> Benificios</p>
             <ul> 
-                <li> link park</li>
-                <li> rock</li>
-                <li> vascp</li>
+                <li> Mais Economico </li>
+                <li> Inclui Massagem</li>
+                <li> </li>
             </ul>
              <a href="{{url_for('cadastro' , plano = 'trimensal')}}"> ASSINE AGORA</a>
         </div>
@@ -92,9 +92,9 @@
             <h4> Plano Anual</h4>
             <p> Benificios</p>
             <ul>
-                <li> Chester</li>
-                <li> Pizaa</li>
-                <li> nene</li>
+                <li> Inclui Terapia</li>
+                <li>  Mais Barato a Longo Prazo</li>
+                <li> </li>
             </ul>
              <a href="{{url_for('cadastro' , plano = 'anual')}}"> ASSINE AGORA</a>
         </div>
