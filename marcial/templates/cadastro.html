@@ -2,13 +2,29 @@
 
 {%block content%}
 
+<div class="plano">
+
 <h2> Você escolheu o plano {{ nome_plano }}</h2>
 
-<div class="formulario"></div>
+</div>
+
+<link rel="stylesheet" href="../static/css/cadastro.css">
+
+<div class="formulario">
     <h3> Antes de se matricular, realize seu cadastro</h2>
-    <form action="" method="POST">
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="error">
+                {{ messages[0] }}
+
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <form action="{{url_for('salvar_cadastro')}}" method="POST">
         <p>CPF</p>
-        <input type="text" id="cpf" placeholder="Digite seu documento">
+        <input type="text" name="cpf" placeholder="Digite seu documento">
 
         <p> Nome Completo</p>
         <input type="text" id="nome" name="nome_usuario" placeholder="Digite seu nome">
@@ -17,7 +33,7 @@
         <input type="email" name="email" placeholder="Digite seu email">
 
         <p> Sexo</p>
-        <select>
+        <select name="sexo">
             <option value="masculino"> Masculino</option>
             <option value="feminino"> Feminino</option>
 
@@ -30,7 +46,12 @@
             <option value="muay"> Muay Thai</option>
             <option value="boxe"> Boxe</option>
         </select>
+
+        <input type="hidden" name="plano_final" value="{{ plano_id }}">
+
+        <button type="submit" class="enviar">  Finalizar Cadastro</button>
         
     </form>
 
 </div>
+{%endblock%}
